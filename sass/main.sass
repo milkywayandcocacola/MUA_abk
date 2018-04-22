@@ -1,0 +1,701 @@
+@import "colors"
+@import "fonts"
+/* Mixins */
+@mixin reg () 
+	font-family: Montserrat-Regular, sans-serif
+@mixin bold ()
+	font-family: Montserrat-Bold, sans-serif
+@mixin gradient-hover ($gradient-type)
+	background: $gradient-type
+	background-repeat: no-repeat
+	background-size: 100% 0rem
+	background-position: bottom
+	transition: background-size 0.25s ease-in
+	&:hover
+		cursor: pointer
+		background-size: 100% 100%
+/* Basic settings */
+*
+	outline: none
+html
+	font-size: 10px
+body
+	margin: 0
+	padding: 0
+	@include reg ()
+	background-color: $light-color
+button, input, a, textarea
+	&:hover
+		outline: none !important
+	&:focus
+		outline: none !important
+button, .logo, .header-menu-text li a
+	user-select: none
+button
+	width: 150px
+	height: 50px
+	color: $dark-color
+	font-size: 2.4rem
+	border: 2px solid $dark-color
+	@include gradient-hover ($hor-gradient)
+	a
+		display: block
+		color: $dark-color
+		text-decoration: none
+	&:hover
+		a
+			color: $light-color
+section
+	min-height: 80rem
+	overflow: hidden
+	background: $light-color
+.section-header
+	text-align: center
+	h3
+		margin: 10rem 0 5rem 0
+		padding: 0
+		display: inline-block
+		font-size: 4.8rem
+		@include bold ()
+		text-transform: uppercase
+		background: $vert-gradient no-repeat
+		background-size: 100% 40%
+		background-position: bottom
+.hide
+	display: none
+.slick-disabled
+	img 
+		display: none
+.sections
+/*main section style*/
+.main
+	position: relative
+	height: 80rem
+	position: fixed
+	width: 100%
+	overflow: hidden
+	background: url(../img/main-bg.jpg) center no-repeat
+	background-size: cover
+	&-content
+		z-index: 0
+		height: 80rem
+		text-align: left
+		&-left
+			display: block
+			vertical-align: bottom
+			height: 100%
+			width: 100%
+			background: url(../img/main-content-left.png) left bottom no-repeat
+		&-right
+			display: table-cell
+			vertical-align: middle
+			color: $dark-color
+			text-align: left
+			h1
+				@include bold ()
+				font-size: 5.2rem
+				line-height: 5rem
+				margin: 0
+			h2
+				@include reg ()
+				font-size: 2.45rem
+				line-height: 1.2
+				margin: 1.5rem 0
+			&-wrap
+				display: table
+				height: 100%
+		.arrow
+			position: absolute
+			bottom: 5rem
+			left: 50%
+			width: 20px
+			height: 20px
+			background: url(../img/arrow-down.svg) center no-repeat
+			background-size: cover
+			-moz-animation: bounce 2s infinite
+			-webkit-animation: bounce 2s infinite
+			animation: bounce 2s infinite
+			filter: opacity(70%)
+		@keyframes bounce 
+			0%, 20%, 50%, 80%, 100% 
+				transform: translate(-10px, 0)
+			40% 
+				transform: translate(-10px, -10px)
+			60%
+				transform: translate(-10px, -5px)v
+	.container
+		height: 100%
+.MD_menu
+	z-index: 998
+	display: none
+.header-menu
+	z-index: 999		
+	height: 70px
+	position: relative
+	&_btn
+		display: none
+		width: 50px
+		height: 50px
+		background: url(../img/menu-button.png) center no-repeat
+		background-size: cover
+		font-size: 18px
+		position: absolute
+		right: 15px
+		top: -60px
+		&:hover
+			cursor: pointer
+			transform: translate(1px, 1px)
+		&__close
+			background: url(../img/menu-button_close.png) center no-repeat
+		background-size: cover
+	&-text
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+		color: $light-color
+		font-size: 2.4rem
+		list-style: none
+		li
+			display: table
+			height: 70px
+			@include gradient-hover ($vert-gradient)
+			a
+				display: table-cell
+				vertical-align: middle
+				color: $light-color
+				text-decoration: none
+				padding: 0 1.43rem
+		#new-item
+			small
+				position: absolute
+				top: 5%
+				right: 35%
+				color: lighten($active-color,10%)
+				font-size: 1.8rem
+				transition: all 0.7s
+			&:hover
+				small
+					color: $dark-color
+	&_container
+		position: fixed
+		z-index: 999
+		background-color: $dark-color
+		box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2)
+	.logo
+		display: table-cell
+		vertical-align: middle
+		&-wrap
+			display: table
+			height: 100%
+.MD_menu
+	height: 70px
+	position: fixed
+	top: 70px
+	background-color: $light-color
+	z-index: 998
+	box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2)
+	&-text
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+		font-size: 2.4rem
+		list-style: none
+		li
+			display: table
+			height: 70px
+			@include gradient-hover ($vert-gradient)
+			a
+				display: table-cell
+				vertical-align: middle
+				color: $dark-color
+				text-decoration: none
+				padding: 0 1.43rem
+		#new-item
+			small
+				position: absolute
+				top: 5%
+				right: 35%
+				color: lighten($active-color,10%)
+				font-size: 1.8rem
+/*about section style*/
+.about
+	text-align: center
+	-webkit-box-shadow: 0px -5px 13px -2px rgba(32,32,32,0.25)
+	-moz-box-shadow: 0px -5px 13px -2px rgba(32,32,32,0.25)
+	box-shadow: 0px -5px 13px -2px rgba(32,32,32,0.25)
+	&-left
+		p
+			font-size: 1.8rem
+			line-height: 1.167
+		.social-icons
+			display: inline-block
+			ul
+				padding: 0
+				margin: 0
+				display: flex
+				li
+					display: block
+					height: 30px
+					width: 30px
+					margin: 1rem
+					@include gradient-hover ($vert-gradient)	
+					a
+						img
+							translate: scale(0.6, 0.6)
+	&-right
+		display: table
+		width: 100%
+		height: 100%
+	&-video
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+/*info_numbers section style*/
+.info_numbers
+	&_content
+		color: $light-color
+		&_item
+			display: table
+			h3
+				@include bold()
+				font-size: 10rem
+				line-height: 1
+				margin-top: 0
+				margin-bottom: 2rem
+			p
+
+				height: 4rem
+				font-size: 2rem
+			&_wrap
+				text-align: center
+				vertical-align: middle
+				display: table-cell
+				height: 30rem
+				width: 100%
+
+/*portfolio section style*/
+.portfolio
+	height: 100rem
+	background: $dark-color url(../img/portfolio/portfolio_bg.jpg) center no-repeat
+	background-size: cover
+	&-header-text
+		color: $light-color
+	&-button
+		&-list
+			display: flex
+			justify-content: center
+			margin: 0 0 5rem 0
+		width: 180px
+		height: 50px
+		border: none
+		color: $light-color
+		padding: 0
+		margin: 0 3rem
+		font-size: 4rem
+		display: inline-block
+		color: $light-color
+		&:hover
+			background-size: 100% 20%
+		&-focus
+			background-size: 100% 30%
+	&-content
+		display: block
+		width: 100%
+		text-align: center
+		.fotorama-lash
+			display: none
+/*services section style*/
+.services
+	&-slider
+		#services-slider-btn
+			padding: 0
+			height: 50px
+			width: 50px
+			border: none
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) scale(0.5)
+			z-index: 3
+			background: none
+			&:hover
+				background: none
+		&-btn
+			&-prev
+				left: -3rem
+			&-next
+				right: -3rem	
+		.slick-track
+			padding: 2px 0
+		&-item
+			margin: 0 0.5rem
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2)
+			text-align: center
+			background: $dark-color
+			&:hover
+				transform: translateY(-2px)
+				background: $vert-gradient
+			&-list
+				min-height: 265px
+				&-line
+					margin: 0.5rem 0
+					display: flex
+					position relative
+					padding: 0 10px
+			h1
+				display: block
+				min-height: 65px
+				font-size: 3rem
+				line-height: 1
+				@include bold ()
+				margin-bottom: 5rem
+				text-transform: uppercase
+			button
+				margin: 4rem 0
+				border: 1px solid $dark-color
+			.form
+				label
+					display: flex
+					justify-content: space-between
+					width: 100%
+					margin: 0.5rem 0
+					text-align: left
+					font-size: 2rem
+					line-height: 1
+					vertical-align: middle
+					&:hover
+						cursor: pointer
+				span
+					padding: 0 10px
+					margin: 0
+				strong
+					display: table-cell
+					vertical-align: middle
+					@include bold ()
+					font-size: 2.4rem
+				.strong_wrap
+					display: table
+					height: 100%
+			input[type="radio"]
+				display: none
+				& + label 
+					position: relative
+					padding-left: 20px
+					-webkit-user-select: none
+					-moz-user-select: none
+					-ms-user-select: none
+				& + label:before
+					content: ''
+					display: block
+					width: 20px
+					height: 20px
+					border: 2px solid black
+					border-radius: 50%
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					opacity: .5
+					transition: all .12s
+					-webkit-transition: all .12s
+					-o-transition: all .12s
+					-moz-transition: all .12s
+					background: url('../img/radio.svg') center no-repeat
+					background-size: 0px
+				&:hover + label:before
+					opacity: .6
+					border: 2px solid $radio-color
+				&:checked + label:before 
+					opacity: 1
+					border: 2px solid $radio-color	
+					background: url('../img/radio.svg') center no-repeat
+					background-size: 10px
+/*courses section style*/
+.courses
+	&-form
+		width: 100%
+		margin: 0 auto
+	&-slider
+		&-item
+			border: none
+			background: $dark-color
+			&:hover
+				border: none
+				background: $vert-gradient
+			&-white
+				width: 95%
+				display: inline-block
+				margin: 0 auto
+				background: $light-color
+			h1
+				margin-bottom: 3rem
+			h2
+				font-size: 2rem
+			p
+				font-size: 1.4rem
+				margin-bottom: 0
+				line-height: 1
+				strong
+					@include bold ()
+					font-size: 4.8rem
+					position: relative
+			button
+				margin: 3rem 0
+			&-list
+				min-height: 18rem
+				display: block
+				width: 100%
+				&-line
+					label
+						span
+							display: block
+				/*Checkboxes styles*/
+				input[type="checkbox"]
+					display: none
+					& + label 
+						display: block
+						position: relative
+						padding-left: 20px
+						color: #202020
+						cursor: pointer
+						-webkit-user-select: none
+						-moz-user-select: none
+						-ms-user-select: none
+					& + label:before
+						content: ''
+						display: block
+						width: 20px
+						height: 20px
+						border: 2px solid black
+						position: absolute
+						left: 0
+						top: 50%
+						transform: translateY(-50%)
+						opacity: .5
+						-webkit-transition: all .12s
+						transition: all .12s
+						background: url('../img/checkbox.svg') center no-repeat
+						background-size: 0px 
+				input:checked + label:before
+					opacity: .9
+					background: url('../img/checkbox.svg') center no-repeat
+					background-size: 20px 		
+				ul
+					display: block
+					width: 100%
+					text-align: left
+					padding-left: 2rem
+					li
+						list-style: none
+						p
+							font-size: 2rem
+							line-height: 1
+/*advertising section style*/
+.advertising
+	min-height: 30rem
+	background: #fff url(../img/main-bg.jpg) center no-repeat
+	background-size: cover
+
+/*feedback section style*/	
+.feedback
+	&-slider
+		margin-top: 5rem
+		text-align: center
+		#feedback-slider-btn
+			padding: 0
+			height: 70px
+			width: 50px
+			border: none
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) scale(0.7)
+			z-index: 3
+			background: none
+			&:hover
+				background: none
+		&-btn
+			&-prev
+				left: -25px
+			&-next
+				right: -25px
+	&-item
+		&_avatar
+			display: block
+			width: 15rem
+			margin: 0 auto 5rem
+		&_text
+			display: table
+			height: 16rem
+			min-height: 15rem
+			font-size: 2rem
+			width: 80%
+			margin: 4rem auto
+			p
+				display: table-cell
+				vertical-align: middle
+		&_name
+			@include bold ()
+			margin: 2rem auto
+			font-size: 2rem
+/*contacts section style*/
+.contacts
+	background: url(../img/contacts-bg.jpg) center no-repeat
+	background-size: cover
+
+	&-girl
+		margin-left: 1rem
+		background: url(../img/contacts-girl.png) center no-repeat
+		background-size: cover
+		width: 45rem
+		height: 80rem
+	&-left
+		height: 100%
+		text-align: center
+		h1
+			margin: 10rem 0 5rem 0
+			@include bold ()
+			font-size: 3.6rem
+			text-transform: uppercase
+	&-form
+		padding: 0rem 3rem
+		input, textarea
+			@include reg ()
+			display: block
+			width: 100%
+			height: 5rem
+			margin-bottom: 2.5rem
+			padding: 1rem 2rem
+			background: none
+			border: 1px solid $dark-color
+			font-size: 2rem
+			line-height: 1
+			&:hover
+				border: 1px solid $active-color
+			&:focus
+				border: 2px solid $active-color
+		textarea
+			resize: none
+			height: 10rem
+			font-size: 2rem
+		button
+			padding: 0
+			height: 50px
+			width: 250px
+		&-line
+			margin: 1.5rem 0
+			display: inline-block
+			background-color: $dark-color
+			height: 2px
+			width: 380px	
+	p
+		font-size: 2.4rem
+		margin: 0 0 2.5rem 0
+	&-icons
+		display: block
+		padding: 0
+		li
+			display: inline-block
+			list-style: none
+			margin: 0 1rem
+			a
+				text-decoration: none
+				p
+					color: $dark-color
+					font-size: 1.2rem
+					span
+						color: $active-color
+/*advertising section style*/
+.footer
+	height: 30rem
+	background: $dark-color
+	&-section
+		text-align: center
+		display: table
+		height: 30rem
+		&_md
+			display: none
+	&-menu, &-map, &-contacts
+		display: table-cell
+		vertical-align: middle
+		ul
+			padding: 0
+			li
+				list-style: none
+				a
+					text-decoration: none
+					font-size: 3rem
+					color: $light-color
+					&:hover
+						color: darken($light-color,20%)
+	&-contacts
+		text-align: right
+		p
+			color: $light-color
+			font-size: 2rem
+			margin: 3rem 0
+		span
+			font-size: 2.8rem
+			transition: all 0.2s
+			a
+				@include bold ()
+				text-decoration: none
+				color: $light-color
+				&:hover
+					color: darken($light-color, 20%)
+		&-social-icons
+			ul
+				li
+					width: 50px
+					padding: 0
+					margin: 0
+					display: inline-block
+					a
+						img
+							transform: scale(0.7, 0.7)
+							@include gradient-hover ($vert-gradient)
+/*404main section style*/
+.main404
+	background:  #f05191 url('../img/404-bg.jpg') center no-repeat
+	background-size: cover
+	position: relative
+	&-content
+		height: 79vh
+		&-top
+			position: absolute
+			bottom: 0
+			left: 0
+			background: url(../img/404-girl.png) center no-repeat
+			background-size: contain
+			height: 100%
+			width: 100%
+	&-blackline
+		display: block
+		vertical-align: middle
+		position: absolute
+		bottom: 0
+		left: 0
+		text-align: center
+		background: $dark-color
+		height: 30vh
+		&-content
+			margin: 0	
+			height: 100%
+			display: table-cell
+			color: $light-color
+			h1
+				text-transform: uppercase
+				margin-top: 3rem
+				@include bold ()
+				font-size: 2.4rem
+			h2
+				@include reg ()
+				font-size: 2rem
+				margin: 3rem 0	
+			button
+				border-color: $light-color
+				color: $light-color
+				margin-bottom: 2rem
+
+
+@import "media"

@@ -1,0 +1,321 @@
+@media (max-width:1199px)
+	html
+		font-size: 10px
+	.section-header
+		text-align: center
+		h3
+			margin: 5rem 0 5rem 0
+	section
+		min-height: 80rem
+	.main
+		&-content
+			position: relative
+			&-left
+				position: absolute
+				bottom: -20%
+				left: 50%
+				transform: scale(0.6)
+			&-right
+				text-align: center
+				h2
+					margin: 2rem 0
+
+	.header-menu
+		&_btn
+			display: block
+		&-text
+			display: none
+	.MD_menu
+		&-text
+			#new-item
+				small
+					right: 35.7%
+		&__active
+			display: flex
+			margin-bottom: 0		
+	.about
+		&-left
+			p
+				font-size: 2rem
+		&-right
+			margin: 2.5rem 0
+			padding-bottom: 10rem
+	.portfolio
+		height: 85rem
+	.services, .courses
+		height: 80rem
+	.courses
+		&-slider-item
+			&-list
+				min-height: 150px
+			h2
+				min-height: 5rem
+	.contacts
+		background: $light-color
+		&-form
+			&-line
+				&-line
+			margin: 20px 0
+		&-icons
+			li
+				a
+					img
+						transform: scale(1)
+					p
+						font-size: 1.6rem
+	.contacts-girl
+		background-position: left
+		width: 250px
+	.footer
+		min-height: 600px
+		&-section
+			&_md
+				display: table
+			&_lg
+				display: none
+		&-contacts
+			text-align: center
+
+@media (max-width:991px)
+	.MD_menu
+		&-text
+			font-size: 1.8rem
+			#new-item
+				small
+					right: 35.7%
+	.services
+		&-slider
+			&-item
+				&-list
+					min-height: 270px
+	.feedback
+		background: darken($light-color,2%)
+		box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.05)
+		&-item
+			&_avatar
+				margin: 0 auto
+			&_text
+				font-size: 1.6rem
+				margin: 2rem auto
+			&_name
+				@include bold ()
+				margin: 1rem auto
+				font-size: 2rem
+	.portfolio
+		height: 90rem
+	.courses
+		height: 80rem
+		&-slider
+			&-item
+				&-list
+					min-height: 160px
+	.contacts
+		background: $light-color
+	.contacts-girl
+		display: none
+@media (max-width:767px)
+
+	html
+		font-size: 7px
+	.main
+		&-content
+			&-left
+				display: none
+	.portfolio-button
+		height: 30px
+		width: 120px
+		&:hover
+			background-size: 100% 5%
+		&-focus
+			background-size: 100% 20%
+	.services
+		&-slider
+			&-item
+				&-list
+					min-height: 175px
+			&-btn
+				&-prev
+					left: -5rem
+				&-next
+					right: -5rem
+	.courses
+		min-height: 85rem
+		&-slider
+			&-item
+				&-list
+					min-height: 150px
+	.footer
+		min-height: 70rem
+	.main404
+		&-blackline
+			height: 40vh
+	.info_numbers
+		&_content
+			&_item
+				h3
+					font-size: 7rem
+					margin-bottom: 2rem
+				p
+					font-size: 1.6rem
+				&_wrap
+					text-align: center
+					vertical-align: middle
+					display: table-cell
+					height: 30rem
+					width: 100%
+
+@media (max-width:575px)
+	html
+		font-size: 7px
+	section
+		min-height: 500px
+	.main
+		&-content
+			&-right
+				h1
+					font-size: 3.5rem
+					line-height: 1
+				h2
+					font-size: 2rem
+					line-height: 1
+				button
+					width: 130px
+					height: 40px
+	.MD_menu
+		height: 100vh
+		position: fixed
+		top: 0px
+		background-color: lighten($dark-color, 5%)
+		filter: opacity(97%)
+		z-index: 998
+		&-text
+			text-align: right
+			width: 100%
+			height: 60vh
+			margin: 80px 0 0 0
+			padding: 0
+			display: block
+			font-size: 2.4rem
+			list-style: none
+			display: flex
+			flex-direction: column
+			li
+				display: table
+				width: 100%
+				height: 50px
+				&:hover
+					background: none
+				a
+					display: table-cell
+					vertical-align: middle
+					color: $light-color
+					text-decoration: none
+					padding: 0
+					position: relative
+					font-size: 3.5rem
+					&:hover
+						color: darken($light-color, 25%)
+			#new-item
+				small
+					position: absolute
+					top: 0%
+					right: 0%
+					color: lighten($active-color,10%)
+					font-size: 2rem	
+	.portfolio
+		max-height: 600px
+		&-button
+			width: 90px
+			height: 30px
+			font-size: 3rem
+	.services
+		&-slider
+			&-btn
+				transform: scale(1)
+				&-prev
+					left: 1rem
+				&-next
+					right: 2rem
+			&-item
+				transform: translateY(-2px)
+				background: none
+				box-shadow: none
+				&:hover
+					background: none
+				&-list
+					margin: 0 auto
+					width: 90%
+					&-line
+						min-width: 90%
+				h1
+					font-size: 4rem
+				h2
+					font-size: 3rem
+				p
+					font-size: 2rem
+					strong
+						font-size: 7rem
+				.form
+					label
+						span
+							font-size: 2.5rem
+	.courses
+		height: 105rem
+		&-slider
+			&-item
+				border: none
+				background: none
+				box-shadow: none
+				&:hover
+					background: none
+					box-shadow: none
+				&-white
+					box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4)
+				&-list
+					min-height: 210px
+					&-line
+						margin: 1rem auto
+						width: 80%
+				h2
+					margin: 0 auto
+					width: 90%
+					min-height: 65px
+				label
+					span
+						font-size: 2.2rem
+	.feedback
+		max-height: 500px
+		&-slider
+			#feedback-slider-btn
+				transform: translateY(-50%) scale(0.5)
+			&-btn
+				&-prev
+					left: 0px
+				&-next
+					right: 0px
+	.contacts
+		&-form
+			&-line
+				width: 250px
+			button
+				width: 180px
+	.footer
+		min-height: 120rem
+		&-section
+			ul
+				margin: 4rem 0
+				li
+					a
+						font-size: 3.6rem
+			span
+				a
+					font-size: 3.6rem
+					line-height: 10rem
+			p
+				font-size: 3rem
+	.main404
+		&-blackline
+			height: 40vh
+
+
+
