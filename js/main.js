@@ -141,11 +141,14 @@ $('.form').change(function() {
   if ($('#c23').is(':checked')){c2_message_text.text(': Вечерний');};
   if ($('#c24').is(':checked')){c2_message_text.text(': Свадебный');};
   if ($('#c25').is(':checked')){c2_message_text.text(': Мужской');};
-  if ($('#c26').is(':checked')){c2_message_text.text(': Фантазийный');};    
+  if ($('#c26').is(':checked')){c2_message_text.text(': Фантазийный');}; 
+  if ($('#c27').is(':checked')){c2_message_text.text(': Накладные ресницы');};   
   $('.c2_button').click(function(){$('#message').text('Здравствуйте! Я хочу записаться на макияж'+c2_message_text.text());});
   //с3 form
-  if ($('#c31').is(':checked')){c3_message_text.text(': Хной/краской + оформление');};
-  if ($('#c32').is(':checked')){c3_message_text.text(': В комплексе с наращиванием ресниц');};
+  if ($('#c31').is(':checked')){c3_message_text.text(': Окрашивание бровей хной/краской');};
+  if ($('#c32').is(':checked')){c3_message_text.text(': Оформление пинцетом');};
+  if ($('#c33').is(':checked')){c3_message_text.text(': Оформление пастой');};
+  if ($('#c34').is(':checked')){c3_message_text.text(': Окрашивание ресниц хной/краской');};
   $('.c3_button').click(function(){$('#message').text('Здравствуйте! Я хочу записаться на окрашивание бровей'+c3_message_text.text());});
   //courses
   var c6_1 = $('#c61');
@@ -164,21 +167,21 @@ $('.form').change(function() {
   c6_text.html('0 ');
   //с4 form
   if ($('#c4 input').is(':checked')){
-    if (c4_1.is(':checked')){c4_text.text('1 500 ₽'); c4_message_text.text('урок "Дневной/Вечерний макияж"');};
-    if (c4_2.is(':checked')){c4_text.text('1 500 ₽'); c4_message_text.text('урок "Смоки айс макияж"');};
-    if (c4_3.is(':checked')){c4_text.text('1 500 ₽'); c4_message_text.text('урок "Голивудский макияж"');};
-    if (c4_1.is(':checked') & c4_2.is(':checked')){c4_text.text('3 000 ₽'); c4_message_text.text('уроки "Дневной/Вечерний макияж" и "Смоки айс макияж"');};
-    if (c4_1.is(':checked') & c4_3.is(':checked')){c4_text.text('3 000 ₽'); c4_message_text.text('уроки "Дневной/Вечерний макияж" и "Голивудский макияж"');};
-    if (c4_2.is(':checked') & c4_3.is(':checked')){c4_text.text('3 000 ₽'); c4_message_text.text('уроки "Смоки айс макияж" и "Голивудский макияж"');};
-    if (c4_1.is(':checked') & c4_2.is(':checked')& c4_3.is(':checked')){c4_text.html('3 300 ₽ <span style="position: absolute; width: 100%; left: 50%; bottom: -10px; transform: translateX(-50%);font-size: 16px; color: #fb3c7a;">Акция! <s> 4 500 ₽</s></span>'); c4_message_text.text('полный курс по акции');};
+    if (c4_1.is(':checked')){c4_text.text('2 000 ₽'); c4_message_text.text('урок "Дневной/Вечерний макияж"');};
+    if (c4_2.is(':checked')){c4_text.text('2 000 ₽'); c4_message_text.text('урок "Смоки айс макияж"');};
+    if (c4_3.is(':checked')){c4_text.text('2 000 ₽'); c4_message_text.text('урок "Голивудский макияж"');};
+    if (c4_1.is(':checked') & c4_2.is(':checked')){c4_text.text('4 000 ₽'); c4_message_text.text('уроки "Дневной/Вечерний макияж" и "Смоки айс макияж"');};
+    if (c4_1.is(':checked') & c4_3.is(':checked')){c4_text.text('4 000 ₽'); c4_message_text.text('уроки "Дневной/Вечерний макияж" и "Голивудский макияж"');};
+    if (c4_2.is(':checked') & c4_3.is(':checked')){c4_text.text('4 000 ₽'); c4_message_text.text('уроки "Смоки айс макияж" и "Голивудский макияж"');};
+    if (c4_1.is(':checked') & c4_2.is(':checked')& c4_3.is(':checked')){c4_text.html('4 500 ₽ <span style="position: absolute; width: 100%; left: 50%; bottom: -17px; transform: translateX(-50%);font-size: 12px; color: #fb3c7a;">Акция! <s>6 000 ₽</s><br><small style="font-size: 10px;">до 1.09.2018</small></span>'); c4_message_text.text('полный курс по акции');};
     $('.c4_button').click(function(){message.text('Здравствуйте! Я хочу записаться на курс "Макияж для себя": '+c4_message_text.text());});
   }
   else{c6_message_text.text(''); message.text('');};
   //с6 form
   if ($('#c6 input').is(':checked')){
-    if (c6_1.is(':checked')){c6_text.text('6 000 '); c6_message_text.text('направление "Идеальная классика" ');};
+    if (c6_1.is(':checked')){c6_text.text('8 000 '); c6_message_text.text('направление "Идеальная классика" ');};
     if (c6_2.is(':checked')){c6_text.text('7 000 '); c6_message_text.text('направление "Объемное наращивание" ');};
-    if (c6_2.is(':checked') & c6_1.is(':checked')){c6_text.text('13 000 '); c6_message_text.text('направления "Идеальная классика" и "Объемное наращивание" ');};
+    if (c6_2.is(':checked') & c6_1.is(':checked')){c6_text.text('15 000 '); c6_message_text.text('направления "Идеальная классика" и "Объемное наращивание" ');};
     $('.c6_button').click(function(){message.text('Здравствуйте! Я хочу записаться на курс "Профессия лашмейкер": '+c6_message_text.text());});
   }
   else{c6_message_text.text(''); message.text('');};

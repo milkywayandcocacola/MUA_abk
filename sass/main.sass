@@ -104,25 +104,25 @@ section
 			&-wrap
 				display: table
 				height: 100%
-		.arrow
-			position: absolute
-			bottom: 5rem
-			left: 50%
-			width: 20px
-			height: 20px
-			background: url(../img/arrow-down.svg) center no-repeat
-			background-size: cover
-			-moz-animation: bounce 2s infinite
-			-webkit-animation: bounce 2s infinite
-			animation: bounce 2s infinite
-			filter: opacity(70%)
-		@keyframes bounce 
-			0%, 20%, 50%, 80%, 100% 
-				transform: translate(-10px, 0)
-			40% 
-				transform: translate(-10px, -10px)
-			60%
-				transform: translate(-10px, -5px)v
+	.arrow
+		position: absolute
+		bottom: 5rem
+		left: 50%
+		width: 20px
+		height: 20px
+		background: url(../img/arrow-down.svg) center no-repeat
+		background-size: cover
+		-moz-animation: bounce 2s infinite
+		-webkit-animation: bounce 2s infinite
+		animation: bounce 2s infinite
+		filter: opacity(70%)
+	@keyframes bounce 
+		0%, 20%, 50%, 80%, 100% 
+			transform: translate(-10px, 0)
+		40% 
+			transform: translate(-10px, -10px)
+		60%
+			transform: translate(-10px, -5px)v
 	.container
 		height: 100%
 .MD_menu
@@ -337,12 +337,14 @@ section
 				transform: translateY(-2px)
 				background: $vert-gradient
 			&-list
-				min-height: 265px
+				min-height: 300px
 				&-line
 					margin: 0.5rem 0
 					display: flex
 					position relative
 					padding: 0 10px
+			p 
+				margin: 3px 0
 			h1
 				display: block
 				min-height: 65px
