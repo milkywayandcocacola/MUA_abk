@@ -7,6 +7,9 @@
 			margin: 5rem 0 5rem 0
 	section
 		min-height: 80rem
+	.section-header
+		h3
+			margin: 7.5rem 0 5rem 0
 	.main
 		&-content
 			position: relative
@@ -19,7 +22,6 @@
 				text-align: center
 				h2
 					margin: 2rem 0
-
 	.header-menu
 		&_btn
 			display: block
@@ -38,16 +40,22 @@
 			p
 				font-size: 2rem
 		&-right
-			margin: 2.5rem 0
-			padding-bottom: 10rem
+			&_features
+				margin-bottom: 3rem
 	.portfolio
 		height: 85rem
-	.services, .courses
+	.services
 		height: 80rem
+		&-slider-item
+			p
+				margin-bottom: 5px
 	.courses
+		height: 80rem
 		&-slider-item
 			&-list
-				min-height: 150px
+				min-height: 165px
+				&-line-about
+					min-height: 334px
 			h2
 				min-height: 5rem
 	.contacts
@@ -87,7 +95,7 @@
 		&-slider
 			&-item
 				&-list
-					min-height: 300px
+					min-height: 307px
 	.feedback
 		background: darken($light-color,2%)
 		box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.05)
@@ -108,15 +116,22 @@
 		&-slider
 			&-item
 				&-list
-					min-height: 160px
+					min-height: 165px
+					ol
+						li
+							margin-bottom: 0.155rem
+
 	.contacts
 		background: $light-color
 	.contacts-girl
 		display: none
-@media (max-width:767px)
 
+@media (max-width:767px)
 	html
 		font-size: 7px
+	button
+		height: 40px 
+		width: 120px
 	.main
 		&-content
 			&-left
@@ -129,6 +144,7 @@
 		&-focus
 			background-size: 100% 20%
 	.services
+		min-height: 85rem
 		&-slider
 			&-item
 				&-list
@@ -139,11 +155,24 @@
 				&-next
 					right: -5rem
 	.courses
-		min-height: 85rem
+		min-height: 90rem
 		&-slider
 			&-item
+				ol
+					padding: 0 0.5rem 0 3rem
 				&-list
-					min-height: 150px
+					min-height: 130px
+					&-line
+						span
+							font-size: 12px
+						&-about
+							min-height: 219px
+							ul
+								min-height: 249px
+								li:before
+									top: 0
+									left: -15px
+				&-white
 	.footer
 		min-height: 70rem
 	.main404
@@ -167,6 +196,7 @@
 @media (max-width:575px)
 	html
 		font-size: 7px
+
 	section
 		min-height: 500px
 	.main
@@ -222,6 +252,24 @@
 					right: 0%
 					color: lighten($active-color,10%)
 					font-size: 2rem	
+	.about-right_features
+		p
+			font-size: 2.5rem
+		&_item
+			display: block
+			width: 45%
+			margin: 0 auto
+			min-height: 0
+			p
+				border-top: none
+				padding-bottom: 2rem
+				border-bottom: 2px solid $dark-color
+			h4
+				margin: 0
+			&:last-child
+				margin: 0 auto
+				p
+					border-bottom: none
 	.portfolio
 		max-height: 600px
 		&-button
@@ -229,7 +277,7 @@
 			height: 30px
 			font-size: 3rem
 	.services
-		min-height: 620px
+		min-height: 650px
 		&-slider
 			&-btn
 				transform: scale(1)
@@ -257,10 +305,9 @@
 					font-size: 2rem
 					strong
 						font-size: 7rem
-				.form
-					label
-						span
-							font-size: 2.5rem
+				label
+					span
+						font-size: 2.5rem
 	.courses
 		height: 105rem
 		&-slider
@@ -268,23 +315,38 @@
 				border: none
 				background: none
 				box-shadow: none
+				ol
+					margin-bottom: 2rem
 				&:hover
 					background: none
 					box-shadow: none
 				&-white
 					box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4)
+					.morebutton
+						font-size: 2rem
 				&-list
-					min-height: 210px
+					min-height: 150px
 					&-line
 						margin: 1rem auto
 						width: 80%
+						label
+							span
+								font-size: 2rem
+						&-about
+							ul
+								min-height: 325px
+								li
+									font-size: 1.7rem
+									&:before
+										top: 0.5rem
 				h2
 					margin: 0 auto
 					width: 90%
 					min-height: 65px
-				label
-					span
-						font-size: 2.2rem
+	.students_portfolio
+		&-section-header
+			h3
+				font-size: 3rem
 	.feedback
 		max-height: 500px
 		&-slider

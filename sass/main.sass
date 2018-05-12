@@ -52,7 +52,7 @@ section
 .section-header
 	text-align: center
 	h3
-		margin: 10rem 0 5rem 0
+		margin: 9rem 0 5rem 0
 		padding: 0
 		display: inline-block
 		font-size: 4.8rem
@@ -66,7 +66,6 @@ section
 .slick-disabled
 	img 
 		display: none
-.sections
 /*main section style*/
 .main
 	position: relative
@@ -165,7 +164,7 @@ section
 				vertical-align: middle
 				color: $light-color
 				text-decoration: none
-				padding: 0 1.43rem
+				padding: 0 1rem
 		#new-item
 			small
 				position: absolute
@@ -226,11 +225,16 @@ section
 	-moz-box-shadow: 0px -5px 13px -2px rgba(32,32,32,0.25)
 	box-shadow: 0px -5px 13px -2px rgba(32,32,32,0.25)
 	&-left
+		text-align: center
 		p
 			font-size: 1.8rem
-			line-height: 1.167
+			line-height: 1.5
+			span
+				text-transform: uppercase
+				@include bold ()
 		.social-icons
 			display: inline-block
+			margin-bottom: 5rem
 			ul
 				padding: 0
 				margin: 0
@@ -245,36 +249,57 @@ section
 						img
 							translate: scale(0.6, 0.6)
 	&-right
-		display: table
-		width: 100%
-		height: 100%
-	&-video
-		display: table-cell
-		text-align: center
+		display: block
 		vertical-align: middle
-/*info_numbers section style*/
-.info_numbers
-	&_content
-		color: $light-color
-		&_item
-			display: table
-			h3
-				@include bold()
-				font-size: 10rem
-				line-height: 1
-				margin-top: 0
-				margin-bottom: 2rem
+		margin-bottom: 4rem
+		p
+			font-size: 1.8rem
+			line-height: 1.4 
+			margin: 0
+		&_brands
+			display: block
+			img
+				display: inline-block
+				width: 173px
+				height: 90px
+				margin-right: 5px
+				filter: grayscale(100%)
+				transform: scale(0.95)
+				transition: all 0.2s ease-in-out
+				&:nth-child(3)
+					margin-right: 0
+				&:hover
+					filter: none
+					transform: scale(1)
+		&_features
+			display: block
+			&_item
+				display: inline-block
+				min-height: 173px
+				margin-right: 25px
+				&:last-child
+					margin-right: 0
+				@include bold ()	
+				h4
+					margin: 0 0 2rem 0
+					font-size: 2rem
+					line-height: 1
+					background: $vert-gradient
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					span
+						font-size: 5rem
+				p
+					margin-top: 2rem
+					padding-top: 2rem
+					border-top: 2px solid $dark-color
+					font-size: 1.4rem
+					line-height: 1.2
+					text-transform: uppercase
 			p
-
-				height: 4rem
-				font-size: 2rem
-			&_wrap
-				text-align: center
-				vertical-align: middle
-				display: table-cell
-				height: 30rem
-				width: 100%
-
+				font-size: 1.8rem
+				line-height: 1.4 
+				margin: 0 0 2rem 0
 /*portfolio section style*/
 .portfolio
 	height: 100rem
@@ -334,7 +359,6 @@ section
 			text-align: center
 			background: $dark-color
 			&:hover
-				transform: translateY(-2px)
 				background: $vert-gradient
 			&-list
 				min-height: 300px
@@ -344,7 +368,8 @@ section
 					position relative
 					padding: 0 10px
 			p 
-				margin: 3px 0
+				margin: 3px 0 0 0
+				font-size: 1.4rem
 			h1
 				display: block
 				min-height: 65px
@@ -354,7 +379,7 @@ section
 				margin-bottom: 5rem
 				text-transform: uppercase
 			button
-				margin: 4rem 0
+				margin: 3rem 0 4rem 0
 				border: 1px solid $dark-color
 			.form
 				label
@@ -442,16 +467,45 @@ section
 					@include bold ()
 					font-size: 4.8rem
 					position: relative
+			ol
+				text-align: left
+				padding-right: 0.5rem
+				margin: 0
+				li
+					font-size: 1.7rem
+					margin-bottom: 0.5rem
+					&:last-child
+						margin-bottom: none
 			button
 				margin: 3rem 0
 			&-list
-				min-height: 18rem
+				min-height: 185px
 				display: block
 				width: 100%
 				&-line
 					label
 						span
 							display: block
+					&-about
+						text-align: left
+						padding: 0 1rem
+						ul
+							min-height: 324px
+							li
+								margin-bottom: 0.9rem
+								font-size: 1.4rem
+								position: relative
+								&:before
+									content: ''
+									display: block
+									position: absolute
+									left: -20px
+									top: 0.5rem
+									
+									width: 10px
+									height: 10px
+									border-radius: 50%
+									background: $hor-gradient
 				/*Checkboxes styles*/
 				input[type="checkbox"]
 					display: none
@@ -493,6 +547,20 @@ section
 						p
 							font-size: 2rem
 							line-height: 1
+.morebutton
+	display: inline-block
+	font-size: 1.4rem
+	color: $active-color
+	transition: all 0.3 ease-in-out
+	margin-bottom: 2rem
+	&:hover
+		color: $radio-color
+		text-decoration: underline
+	&-line
+		display: block
+		width: 95%
+		text-align: right
+
 /*advertising section style*/
 .advertising
 	min-height: 30rem
