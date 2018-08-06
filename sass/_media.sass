@@ -4,12 +4,8 @@
 	.section-header
 		text-align: center
 		h3
-			margin: 5rem 0 5rem 0
-	section
-		min-height: 80rem
-	.section-header
-		h3
 			margin: 7.5rem 0 5rem 0
+	section
 	.main
 		&-content
 			position: relative
@@ -43,12 +39,17 @@
 			&_features
 				margin-bottom: 3rem
 	.portfolio
-		height: 85rem
 	.services
 		height: 80rem
 		&-slider-item
 			p
 				margin-bottom: 5px
+	.ads
+		&-slider
+			&-item
+				&-button
+					bottom: 3rem
+					transform: translateX(-50%) scale(0.8)
 	.courses
 		height: 80rem
 		&-slider-item
@@ -110,7 +111,12 @@
 				margin: 1rem auto
 				font-size: 2rem
 	.portfolio
-		height: 90rem
+	.ads
+		&-slider
+			&-item
+				&-button
+					bottom: 2rem
+					transform: translateX(-50%) scale(0.6)
 	.courses
 		height: 80rem
 		&-slider
@@ -131,7 +137,6 @@
 		font-size: 7px
 	button
 		height: 40px 
-		width: 120px
 	.main
 		&-content
 			&-left
@@ -154,6 +159,12 @@
 					left: -5rem
 				&-next
 					right: -5rem
+	.ads
+		&-slider
+			&-item
+				&-button
+					bottom: 1rem
+					transform: translateX(-50%) scale(0.6)
 	.courses
 		min-height: 90rem
 		&-slider
@@ -197,11 +208,10 @@
 	html
 		font-size: 7px
 
-	section
-		min-height: 500px
 	.main
 		&-content
 			&-right
+				margin-top: 40vh
 				h1
 					font-size: 3.5rem
 					line-height: 1
@@ -271,7 +281,6 @@
 				p
 					border-bottom: none
 	.portfolio
-		max-height: 600px
 		&-button
 			width: 90px
 			height: 30px
@@ -308,6 +317,12 @@
 				label
 					span
 						font-size: 2.5rem
+	.ads
+		&-slider
+			&-item
+				&-button
+					bottom: -0.5rem
+					transform: translateX(-50%) scale(0.4)
 	.courses
 		height: 105rem
 		&-slider

@@ -32,7 +32,6 @@ button, input, a, textarea
 button, .logo, .header-menu-text li a
 	user-select: none
 button
-	width: 150px
 	height: 50px
 	color: $dark-color
 	font-size: 2.4rem
@@ -46,7 +45,6 @@ button
 		a
 			color: $light-color
 section
-	min-height: 80rem
 	overflow: hidden
 	background: $light-color
 .section-header
@@ -86,8 +84,9 @@ section
 			width: 100%
 			background: url(../img/main-content-left.png) left bottom no-repeat
 		&-right
-			display: table-cell
-			vertical-align: middle
+			margin-top: 50%
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
 			color: $dark-color
 			text-align: left
 			h1
@@ -302,7 +301,6 @@ section
 				margin: 0 0 2rem 0
 /*portfolio section style*/
 .portfolio
-	height: 100rem
 	background: $dark-color url(../img/portfolio/portfolio_bg.jpg) center no-repeat
 	background-size: cover
 	&-header-text
@@ -329,8 +327,9 @@ section
 		display: block
 		width: 100%
 		text-align: center
+		margin-bottom: 2rem
 		.fotorama-lash
-			display: none
+			display: none		
 /*services section style*/
 .services
 	&-slider
@@ -346,6 +345,7 @@ section
 			background: none
 			&:hover
 				background: none
+		margin-bottom: 3rem
 		&-btn
 			&-prev
 				left: -3rem
@@ -560,15 +560,27 @@ section
 		display: block
 		width: 95%
 		text-align: right
-
 /*advertising section style*/
-.advertising
-	min-height: 30rem
-	background: #fff url(../img/main-bg.jpg) center no-repeat
+.ads
+	overflow: hidden
+	background: $light-color url(../img/main-bg.jpg) center no-repeat
 	background-size: cover
-
+	&-slider
+		margin-top: 1rem
+		&-item
+			position: relative
+			text-align: center
+			&-img
+				width: 100%
+			&-button
+				position: absolute
+				bottom: 4rem
+				left: 42.5%
+				transform: translateX(-50%)
 /*feedback section style*/	
 .feedback
+	&_row
+		margin-bottom: 5rem
 	&-slider
 		margin-top: 5rem
 		text-align: center
@@ -612,7 +624,6 @@ section
 .contacts
 	background: url(../img/contacts-bg.jpg) center no-repeat
 	background-size: cover
-
 	&-girl
 		margin-left: 1rem
 		background: url(../img/contacts-girl.png) center no-repeat
@@ -724,6 +735,20 @@ section
 						img
 							transform: scale(0.7, 0.7)
 							@include gradient-hover ($vert-gradient)
+	.developer
+		background: $dark-color
+		text-align: center
+		p
+			@include reg()
+			color: $light-color
+			font-size: 1.2rem
+			a
+				@include bold()
+				font-size: 1.5rem
+				text-decoration: none
+				color: $radio-color
+		&-text
+			margin-top: 2rem
 /*404main section style*/
 .main404
 	background:  #f05191 url('../img/404-bg.jpg') center no-repeat
@@ -766,6 +791,4 @@ section
 				border-color: $light-color
 				color: $light-color
 				margin-bottom: 2rem
-
-
 @import "media"
